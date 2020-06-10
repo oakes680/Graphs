@@ -23,7 +23,7 @@ class Graph:
         """
         if v1 in self.vertices and v2 in self.vertices:
             self.vertices[v1].add(v2)
-            print(self.vertices)
+            # print(self.vertices)
 
     def get_neighbors(self, vertex_id):
         """
@@ -226,7 +226,7 @@ if __name__ == '__main__':
         1, 2, 4, 3, 7, 6, 5
         1, 2, 4, 3, 7, 5, 6
     '''
-    print(graph.bft(1))
+    # print(graph.bft(1))
     # '''
     # Valid DFT paths:
     #     1, 2, 3, 5, 4, 6, 7
@@ -240,7 +240,7 @@ if __name__ == '__main__':
     # Valid BFS path:
     #     [1, 2, 4, 6]
     # '''
-    # print(graph.bfs(1, 6))
+    print(graph.bfs(1, 6))
     # '''
     # Valid DFS paths:
     #     [1, 2, 4, 6]
