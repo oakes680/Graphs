@@ -99,12 +99,11 @@ def earliest_ancestor(ancestors, starting_node):
         parent = popped
         if popped not in visited: 
             visited.add(popped)
-            for neighbor in get_neighbors1(parent, ancestors):
-             
+            for neighbor in get_neighbors1(parent, ancestors):    
                 s.push(neighbor)
-            
-    
+                
     return parent
+
 
 
 def get_neighbors1(node, ancestors):
@@ -116,6 +115,6 @@ def get_neighbors1(node, ancestors):
     return neighbors
 
 
-print(earliest_ancestor([(1, 3), (2, 3), (3, 6), (5, 6), (5, 7), (4, 5), (4, 8), (8, 9), (11, 8), (10, 1)], 6))
+print(earliest_ancestor([(14, 3), (2, 3), (3, 6), (5, 6), (5, 7), (4, 5), (4, 8), (8, 9), (11, 8), ], 6))
 
 # print(get_neighbors1(4, [(1, 3), (2, 3), (3, 6), (5, 6), (5, 7), (4, 5), (4, 8), (8, 9), (11, 8), (10, 1)]))

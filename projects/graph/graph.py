@@ -15,6 +15,7 @@ class Graph:
         Add a vertex to the graph.
         """
         self.vertices[vertex_id] = set()
+        # print(self.vertices)
 
     def add_edge(self, v1, v2):
         """
@@ -22,6 +23,7 @@ class Graph:
         """
         if v1 in self.vertices and v2 in self.vertices:
             self.vertices[v1].add(v2)
+            print(self.vertices)
 
     def get_neighbors(self, vertex_id):
         """
@@ -43,11 +45,11 @@ class Graph:
             if v not in visited:
                 print(v)
                 visited.add(v)
-                #visited(1, 2)
+              
                 for vertex in self.get_neighbors(v):
-                    # 2
+                  
                     q.enqueue(vertex)
-                #q = [3,4]
+              
 
     def dft(self, starting_vertex):
         """
@@ -88,9 +90,8 @@ class Graph:
         breath-first order.
         {1: {2}, 2: {3, 4}, 3: {5}, 4: {6, 7}, 5: {3}, 6: {3}, 7: {1, 6}}
         """
-        # keep track of explored nodes
         visited = set()
-    # keep track of all the paths to be checked
+
         q = Queue()
       
         q.enqueue([starting_vertex])
@@ -225,7 +226,7 @@ if __name__ == '__main__':
         1, 2, 4, 3, 7, 6, 5
         1, 2, 4, 3, 7, 5, 6
     '''
-    # print(graph.bft(1))
+    print(graph.bft(1))
     # '''
     # Valid DFT paths:
     #     1, 2, 3, 5, 4, 6, 7
@@ -233,7 +234,7 @@ if __name__ == '__main__':
     #     1, 2, 4, 7, 6, 3, 5
     #     1, 2, 4, 6, 3, 5, 7
     # '''
-    # graph.dft(1)
+    # print(graph.dft(1))
     # print(graph.dft_recursive(1))
     # '''
     # Valid BFS path:
@@ -246,7 +247,7 @@ if __name__ == '__main__':
     #     [1, 2, 4, 7, 6]
     # '''
     # print(graph.dfs(1, 6))
-    print(graph.dfs_recursive(1, 6))
+    # print(graph.dfs_recursive(1, 6))
 # path [1]x
 # new_path [1]x
 # new_path1 [1, 2]x
